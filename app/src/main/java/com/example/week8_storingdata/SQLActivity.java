@@ -53,7 +53,7 @@ public class SQLActivity extends ListActivity {
             case R.id.delete:
                 if (getListAdapter().getCount() > 0) {
                     nt = (Note) getListAdapter().getItem(0);
-                    datasource.deleteCommentNote(nt);
+                    datasource.deleteNote(nt);
                     adapter.remove(nt);
                 }
                 break;
