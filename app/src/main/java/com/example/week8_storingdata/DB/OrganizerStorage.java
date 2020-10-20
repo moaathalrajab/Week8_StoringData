@@ -70,7 +70,7 @@ public class OrganizerStorage {
     private Note cursorToComment(Cursor cursor) {
         Note comment = new Note();
         comment.setId(cursor.getLong(0));
-        comment.setComment(cursor.getString(1));
+        comment.setNote(cursor.getString(1));
         return comment;
     }
 }
