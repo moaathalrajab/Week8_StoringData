@@ -5,7 +5,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.week7_storingdata"
+        applicationId "com.example.week8_storingdata"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
