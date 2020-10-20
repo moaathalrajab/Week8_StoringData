@@ -18,8 +18,8 @@ public class Note {
         return note;
     }
 
-    public void setComment(String comment) {
-        this.note = comment;
+    public void setNote(String nt) {
+        this.note = nt;
     }
 
     // Will be used by the ArrayAdapter in the ListView
