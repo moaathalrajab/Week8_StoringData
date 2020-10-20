@@ -4,7 +4,7 @@ package com.example.week8_storingdata.DB;
 
 public class Note {
     private long id;
-    private String comment;
+    private String note;
 
     public long getId() {
         return id;
@@ -14,17 +14,17 @@ public class Note {
         this.id = id;
     }
 
-    public String getComment() {
-        return comment;
+    public String getNote() {
+        return note;
     }
 
     public void setComment(String comment) {
-        this.comment = comment;
+        this.note = comment;
     }
 
     // Will be used by the ArrayAdapter in the ListView
     @Override
     public String toString() {
-        return comment;
+        return note;
     }
 }
