@@ -27,7 +27,7 @@ public class SQLActivity extends ListActivity {
         datasource = new OrganizerStorage(this);
         datasource.open();
 
-        List<Note> values = datasource.getAllComments();
+        List<Note> values = datasource.getAllNotes();
 
         // use the SimpleCursorAdapter to show the
         // elements in a ListView
@@ -53,7 +53,7 @@ public class SQLActivity extends ListActivity {
             case R.id.delete:
                 if (getListAdapter().getCount() > 0) {
                     nt = (Note) getListAdapter().getItem(0);
-                    datasource.deleteComment(nt);
+                    datasource.deleteCommentNote(nt);
                     adapter.remove(nt);
                 }
                 break;

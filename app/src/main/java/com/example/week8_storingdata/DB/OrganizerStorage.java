@@ -43,34 +43,34 @@ public class OrganizerStorage {
         return newComment;
     }
 
-    public void deleteComment(Note comment) {
-        long id = comment.getId();
-        System.out.println("Comment deleted with id: " + id);
+    public void deleteNote(Note note) {
+        long id = note.getId();
+        System.out.println("Note deleted with id: " + id);
         database.delete(MySQLiteHelper.TABLE_COMMENTS, MySQLiteHelper.COLUMN_ID
                 + " = " + id, null);
     }
 
-    public List<Note> getAllComments() {
-        List<Note> comments = new ArrayList<Note>();
+    public List<Note> getAllNotes() {
+        List<Note> notes = new ArrayList<Note>();
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_COMMENTS,
                 allColumns, null, null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            Note comment = cursorToComment(cursor);
-            comments.add(comment);
+            Note note = cursorToComment(cursor);
+            notes.add(note);
             cursor.moveToNext();
         }
         // make sure to close the cursor
         cursor.close();
-        return comments;
+        return notes;
     }
 
     private Note cursorToComment(Cursor cursor) {
-        Note comment = new Note();
-        comment.setId(cursor.getLong(0));
-        comment.setNote(cursor.getString(1));
-        return comment;
+        Note note = new Note();
+        note.setId(cursor.getLong(0));
+        note.setNote(cursor.getString(1));
+        return note;
     }
 }
