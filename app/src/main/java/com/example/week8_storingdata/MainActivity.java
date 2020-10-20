@@ -1,4 +1,4 @@
-package com.example.week7_storingdata;
+package com.example.week8_storingdata;
 
 import androidx.appcompat.app.AppCompatActivity;
 

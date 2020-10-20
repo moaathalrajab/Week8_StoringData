@@ -2,4 +2,7 @@
     <string name="app_name">Week7_StoringData</string>
     <string name="retrieve">Retrieve</string>
     <string name="clear">Clear</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="fname">Moaath</string>
 </resources>
